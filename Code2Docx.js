@@ -17,7 +17,7 @@ const ignoreKey = [
 
 
 // let filePath = '/Users/shiyuanchen/项目/WeToolBox';
-const filePath = '/Users/shiyuanchen/项目/NodeJs/WeToolBoxNodeJs';   //需要遍历的项目跟路径
+const filePath = 'xx';   //需要遍历的项目跟路径
 const fileName = 'xxx'  //生成的Docs文件名称
 const creator = '';
 const title = '';
