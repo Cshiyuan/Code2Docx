@@ -1,0 +1,14 @@
+{
+  "name": "Code2Docx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Code2Docx.js",
+  "scripts": {
+    "start" : "node Code2Docx.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docx": "^3.4.0"
+  }
+}
