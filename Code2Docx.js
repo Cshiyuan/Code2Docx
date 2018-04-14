@@ -117,6 +117,12 @@ function write2Docx(level, filename, code) {
     if (level === 3) {
         doc.createParagraph(filename).heading5();
     }
+    if (level === 4) {
+        doc.createParagraph(filename).heading6();
+    }
+    if (level === 5) {
+        doc.createParagraph(filename).heading7();
+    }
 
     let codeArray = code.split("\n");
     codeArray.forEach(item => {
@@ -165,6 +171,25 @@ function initStyle(doc) {
         .spacing({ before: 300, after: 300 });
 
     doc.Styles.createParagraphStyle('Heading5', 'Heading 5')
+        .basedOn("DengXian")
+        // .next("Normal")
+        .quickFormat()
+        .size(32)
+        .bold()
+        // .underline('double', 'FF0000')
+        .spacing({ before: 300, after: 300 });
+
+    doc.Styles.createParagraphStyle('Heading6', 'Heading 6')
+        .basedOn("DengXian")
+        // .next("Normal")
+        .quickFormat()
+        .size(32)
+        .bold()
+        // .underline('double', 'FF0000')
+        .spacing({ before: 300, after: 300 });
+
+
+    doc.Styles.createParagraphStyle('Heading7', 'Heading 7')
         .basedOn("DengXian")
         // .next("Normal")
         .quickFormat()
