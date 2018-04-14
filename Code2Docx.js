@@ -15,13 +15,18 @@ const ignoreKey = [
     'images'
 ]  //需要忽略的文件或者文件夹名称
 
+const isWindows = false; //如果是window系统，请改成true
 
-// let filePath = '/Users/shiyuanchen/项目/WeToolBox';
+// let filePath = '/Users/shiyuanchen/项目/WeToolBox';  
+// let filePath = 'D:\\workspace\\haha\\project;   
+// 重要，如果是window系统，需要将其中的\置换成\\  例子如上
+
+
 const filePath = 'xx';   //需要遍历的项目跟路径
 const fileName = 'xxx'  //生成的Docs文件名称
 const creator = '';
 const title = '';
-const description ='';
+const description = '';
 
 
 const doc = new docx.Document({
@@ -53,9 +58,17 @@ function csReadFile(level, readurl, name, doc) {
 
                 let title
                 if (name === '') {
-                    title = '/' + filename;
+                    if (isWindows) {
+                        title = '\\' + filename;
+                    } else {
+                        title = '/' + filename;
+                    }
                 } else {
-                    title = name + '/' + filename;
+                    if (isWindows) {
+                        title = name + '\\' + filename;
+                    } else {
+                        title = name + '/' + filename;
+                    }
                 }
 
                 let data = fs.readFileSync(filePath + title, { flag: 'r+', encoding: 'utf8' });
@@ -68,8 +81,14 @@ function csReadFile(level, readurl, name, doc) {
             if (ignoreKey.indexOf(filename) === -1) {
                 var dirName = filename;
                 //递归
-                write2Docx(level, '/' + filename, '', doc)
-                return csReadFile(level + 1, path.join(readurl, filename), name + '/' + dirName, doc);
+                if (isWindows) {
+                    write2Docx(level, '\\' + filename, '', doc)
+                    return csReadFile(level + 1, path.join(readurl, filename), name + '\\' + dirName, doc);
+                } else {
+                    write2Docx(level, '/' + filename, '', doc)
+                    return csReadFile(level + 1, path.join(readurl, filename), name + '/' + dirName, doc);
+                }
+
             }
         }
     });
@@ -94,6 +113,9 @@ function write2Docx(level, filename, code) {
     }
     if (level === 2) {
         doc.createParagraph(filename).heading4();
+    }
+    if (level === 3) {
+        doc.createParagraph(filename).heading5();
     }
 
     let codeArray = code.split("\n");
@@ -134,6 +156,15 @@ function initStyle(doc) {
 
 
     doc.Styles.createParagraphStyle('Heading4', 'Heading 4')
+        .basedOn("DengXian")
+        // .next("Normal")
+        .quickFormat()
+        .size(32)
+        .bold()
+        // .underline('double', 'FF0000')
+        .spacing({ before: 300, after: 300 });
+
+    doc.Styles.createParagraphStyle('Heading5', 'Heading 5')
         .basedOn("DengXian")
         // .next("Normal")
         .quickFormat()
