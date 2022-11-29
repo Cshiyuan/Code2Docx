@@ -1,1 +1,30 @@
-<mxfile host="app.diagrams.net" modified="2022-11-29T03:07:06.921Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36" version="20.6.0" etag="02ES5L1375i0CNu4bqtD" type="github"><diagram id="FT5ojaSj4Js_BDbaIIDt">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-11-29T03:20:24.156Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36" version="20.6.0" etag="5zhepi3d0wne6DHvHBgl" type="github" pages="2">
+  <diagram id="_2Zeekwvwp-pjl_tttwp" name="第 1 页">
+    <mxGraphModel dx="1031" dy="684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vwrqKn6VRALlGGdk-S2a-1" value="服务管理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="220" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vwrqKn6VRALlGGdk-S2a-2" value="配置管理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vwrqKn6VRALlGGdk-S2a-5" value="服务观测" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="220" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vwrqKn6VRALlGGdk-S2a-6" value="配置变更" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="300" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="FEFYLhbCsGmnFILLlnHO" name="第 2 页">
+    <mxGraphModel dx="1031" dy="684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
